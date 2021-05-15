@@ -357,7 +357,7 @@ class BattleViewController: UIViewController {
     
     @IBAction func fireAction() {
         
-        if isPlayerAttackAvailable && player.currentTP >= 40 {
+        if isPlayerAttackAvailable && playerTP >= 40 {
             techMonManager.damageAnimation(imageView: enemyImageView)
             techMonManager.playSE(fileName: "SE_fire")
             
@@ -370,7 +370,7 @@ class BattleViewController: UIViewController {
             
             let numberInt = userDefaults.integer(forKey: "monsterNo")
             if numberInt == 2{
-                enemyHP -= 100
+                enemyHP -= 50
             } else if numberInt == 1{
                 enemy1HP -= 100
             } else{
